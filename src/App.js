@@ -1,24 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+import Header from "./Header";
+import Home from "./Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Checkout from "./Checkout";
+import Login from "./Login";
+import { auth } from "./firebase";
+import { useStateValue } from "./StateProvider";
 
 function App() {
+  const [{}, dispatch] = useStateValue();
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      console.log("User is ", authUser);
+
+      if (authUser) {
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        });
+      } else {
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
+      }
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+
+          <Route path="/checkout">
+            <Header />
+            <Checkout />
+          </Route>
+
+          {/* Root node should be at last */}
+          <Route path="/">
+            <Header />
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
