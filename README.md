@@ -1,7 +1,7 @@
 # Full E-commerce + Stripe functionality AMAZON Clone
 Fully functional e-commerce **AMAZON** clone with stripe functionality 🔥, with decent UI meeting all needs of the user to provide better experience.
 
-## Framework, Library & Packages:
+## Library & Packages:
 - ReactJS
 - Firebase(for cloud functions)
 - Stripe API keys
@@ -9,7 +9,7 @@ Fully functional e-commerce **AMAZON** clone with stripe functionality 🔥, wit
 - ExpressJS
 - Currency Format
 
-## ScreenShots:
+## Screenshots:
   <h4>Sign In Page</h4>
 	<p align="center">
   <kbd>
