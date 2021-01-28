@@ -1,5 +1,5 @@
-# Full E-commerce + Stripe functionality AMAZON Clone
-Fully functional e-commerce **AMAZON** clone with stripe functionality 🔥, with decent UI meeting all needs of the user to provide better experience.
+# Full E-commerce + Stripe Payment functionality AMAZON Clone
+Fully functional e-commerce **AMAZON** clone with Stripe payment functionality 🔥, with decent UI meeting all needs of the user to provide better experience.
 
 ## Library & Packages:
 - ReactJS
