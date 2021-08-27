@@ -9,7 +9,7 @@ function ProductFeed({ products }) {
         .map(({ id, title, price, description, category, image }) => {
           return (
             <Product
-              key={id}
+              key={description}
               id={id}
               title={title}
               price={price}
