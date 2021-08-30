@@ -14,9 +14,9 @@ function Order(order) {
         <div>
           <p className="text-xs font-bold">TOTAL</p>
           <p>
-            <Currency quantity={order.amount * 75} currency="INR" /> - Next-day
+            <Currency quantity={order.amount} currency="INR" /> - Next-day
             Delivery{" "}
-            <Currency quantity={order.amountShipping * 75} currency="INR" />
+            <Currency quantity={order.amountShipping} currency="INR" />
           </p>
         </div>
         <p className="text-sm whitespace-nowrap sm:text-xl self-end flex-1 text-right text-blue-500">
