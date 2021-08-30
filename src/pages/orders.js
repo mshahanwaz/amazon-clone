@@ -5,7 +5,6 @@ import Header from "../components/Header";
 import Order from "../components/Order";
 
 function orders({ orders }) {
-  console.log(orders);
   const [session] = useSession();
   return (
     <div>
@@ -15,9 +14,9 @@ function orders({ orders }) {
           Your Orders
         </h1>
         {session ? (
-          <h2>{orders?.length} Orders</h2>
+          <h2 className="my-2">{orders?.length} Orders</h2>
         ) : (
-          <h2>Please sign in to see your orders</h2>
+          <h2 className="my-2">Please sign in to see your orders</h2>
         )}
         <div className="mt-5 space-y-4">
           {orders?.map(

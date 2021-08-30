@@ -17,7 +17,6 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const endpointSecret = process.env.STRIPE_SIGNING_SECRET;
 
 const fulfillOrder = async (session) => {
-  // console.log('>>> fulfilling order', session);
   return app
     .firestore()
     .collection("users")
@@ -40,7 +39,6 @@ export default async (req, res) => {
     const requestBuffer = await buffer(req);
     const payload = requestBuffer.toString();
     const sig = req.headers["stripe-signature"];
-    console.log(sig);
 
     let event;
 
