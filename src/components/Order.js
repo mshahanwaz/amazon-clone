@@ -34,7 +34,7 @@ function Order(order) {
           {order.images.map((image, i) => {
             return (
               <img
-                className="h-10 w-10 object-contain"
+                className="h-20 w-20 object-contain"
                 key={i}
                 src={image}
                 alt="items"
