@@ -12,7 +12,7 @@ function Order(order) {
           <p>{moment.unix(order.timestamp).format("DD MMM YYYY")}</p>
         </div>
         <div>
-          <p className="text-xs font-bold">TOTAL AMOUNT</p>
+          <p className="text-xs font-bold">TOTAL</p>
           <p>
             <Currency quantity={order.amount * 75} currency="INR" /> - Next-day
             Delivery{" "}
@@ -31,7 +31,7 @@ function Order(order) {
           {order.images.map((image, i) => {
             return (
               <img
-                className="h-20 object-contain sm:h-32"
+                className="mx-2 h-20 object-contain sm:h-32"
                 key={i}
                 src={image}
                 alt="items"
