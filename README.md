@@ -1,6 +1,7 @@
 # Amazon clone build
 
-Fully functional server side rendered Amazon clone with Stripe payment functionality with webhooks to fetch events to dispatch data from Stripe into Firebase firestore database, and with Redux as global state manager.
+- Fully-functional SSR Amazon clone built with Next.js with Firebase. 
+- Included with the ability to add products to the basket using global state manager Redux and checkout functionality to handle payment procedures using Stripe.
 
 `Link` - [https://amazon-build-ten.vercel.app/](https://amazon-build-ten.vercel.app/)
 
